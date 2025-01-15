@@ -1,0 +1,1 @@
+Its important making sure you fully understand the work than rushing to complete as many cards as possible, becouse Rushed work may lead to mistakes, poor outcomes or missed details, which may require time later to correct.
