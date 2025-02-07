@@ -11,8 +11,5 @@ class Person {
     }
   }
   
-<<<<<<< HEAD
   export default Person;
   
-=======
->>>>>>> my-new-branch
