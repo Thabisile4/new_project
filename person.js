@@ -11,6 +11,7 @@ class Person {
     }
   }
   
+<<<<<<< HEAD
   // Example usage
   const person = new Person({
     name: "Ryan",
@@ -25,3 +26,7 @@ class Person {
   
   // Export the Person class
   module.exports = { Person };
+=======
+  export default Person;
+  
+>>>>>>> main
