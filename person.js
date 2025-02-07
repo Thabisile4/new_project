@@ -11,22 +11,3 @@ class Person {
     }
   }
   
-<<<<<<< HEAD
-  // Example usage
-  const person = new Person({
-    name: "Ryan",
-    age: 30,
-    gender: "male",
-    interests: ["being a hardarse", "agile", "SSD hard drives"],
-  });
-  
-  const greeting = person.hello();
-  console.log(greeting); 
-  // Expected output: "Hello, my name is Ryan, I am 30 years old, and I am interested in being a hardarse, agile, SSD hard drives."
-  
-  // Export the Person class
-  module.exports = { Person };
-=======
-  export default Person;
-  
->>>>>>> main
