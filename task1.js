@@ -12,6 +12,3 @@ function multiples(n) {
     console.log(sum); // Print the result
 }
 
-// Example usage
-multiples(10); // prints 23
-multiples(11); // prints 33
