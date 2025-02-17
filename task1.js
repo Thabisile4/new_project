@@ -1,17 +1,29 @@
-function multiples(n) {
-    let sum = 0;
-
-    // Loop through numbers below n
-    for (let i = 1; i < n; i++) {
-        // Check if i is a multiple of 3 or 5
-        if (i % 3 === 0 || i % 5 === 0) {
-            sum += i; // Add to the sum
-        }
+class Person {
+    constructor({ name, age, gender, interests }) {
+      this.name = name;
+      this.age = age;
+      this.gender = gender;
+      this.interests = interests;
     }
-
-    console.log(sum); // Print the result
-}
-
-// Example usage
-multiples(10); // prints 23
-multiples(11); // prints 33
+  
+    formatInterests() {
+      if (this.interests.length === 0) {
+        return "I have no interests.";
+      }
+      if (this.interests.length === 1) {
+        return `My interest is ${this.interests[0]}.`;
+      }
+      if (this.interests.length === 2) {
+        return `My interests are ${this.interests[0]} and ${this.interests[1]}.`;
+      }
+      return `My interests are ${this.interests.slice(0, -1).join(", ")} and ${this.interests[this.interests.length - 1]}.`;
+    }
+  
+    hello() {
+      const interestsFormatted = this.formatInterests();
+      return `Hello, my name is ${this.name}, I am ${this.age} years old, and ${interestsFormatted}`;
+    }
+  }
+  
+  module.exports = {Person};
+  

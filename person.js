@@ -1,23 +1,28 @@
 class Person {
-    constructor({ name, age, gender, interests }) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.interests = interests;
-    }
+  constructor({ name, age, gender, interests }) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.interests = interests;
+  }
 
-    hello() {
-        return `Hello, my name is ${this.name}. I am ${this.age} years old, identify as ${this.gender}, and I enjoy ${this.interests.join(", ")}.`;
+  formatInterests() {
+    if (this.interests.length === 0) {
+      return "no interests";
     }
+    if (this.interests.length === 1) {
+      return `my interest is ${this.interests[0]}`;
+    }
+    if (this.interests.length === 2) {
+      return `my interests are ${this.interests[0]} and ${this.interests[1]}`;
+    }
+    return `my interests are ${this.interests.slice(0, -1).join(", ")} and ${this.interests[this.interests.length - 1]}`;
+  }
+
+  hello() {
+    const interestsFormatted = this.formatInterests();
+    return `Hello, my name is ${this.name}, I am ${this.age} years old, and ${interestsFormatted}.`;
+  }
 }
 
-// Example usage
-const person = new Person({
-    name: "Ryan",
-    age: 30,
-    gender: "male",
-    interests: ["being a hardarse", "agile", "SSD hard drives"],
-});
-
-const greeting = person.hello();
-console.log(greeting);
+module.exports = Person;
