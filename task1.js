@@ -5,6 +5,7 @@ class Person {
       this.gender = gender;
       this.interests = interests;
     }
+<<<<<<< HEAD
   
     formatInterests() {
       if (this.interests.length === 0) {
@@ -27,3 +28,9 @@ class Person {
   
   module.exports = {Person};
   
+=======
+
+    console.log(sum); // Print the result
+}
+
+>>>>>>> main
