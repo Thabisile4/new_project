@@ -7,9 +7,12 @@ class Person {
     }
 
     hello() {
-        return `Hello, my name is ${this.name}. I am ${this.age} years old, identify as ${this.gender}, and I enjoy ${this.interests.join(", ")}.`;
+        return `Hello, my name is ${this.name}. My gender is ${this.gender}, and I am ${this.age} years old. My interests are ${this.interests.join(", ")}.`;
     }
 }
+
+// Exporting the class
+export default Person;
 
 // Example usage
 const person = new Person({
