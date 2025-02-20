@@ -16,13 +16,17 @@ class Person {
     if (this.interests.length === 2) {
       return `my interests are ${this.interests[0]} and ${this.interests[1]}`;
     }
-    return `my interests are ${this.interests.slice(0, -1).join(", ")} and ${this.interests[this.interests.length - 1]}`;
+    return `my interests are ${this.interests.slice(0, -1).join(", ")} and 
+${this.interests[this.interests.length - 1]}`;
   }
 
   hello() {
     const interestsFormatted = this.formatInterests();
-    return `Hello, my name is ${this.name}, I am ${this.age} years old, and ${interestsFormatted}.`;
+    return `Hello, my name is ${this.name}, I am ${this.age} years old, and 
+${interestsFormatted}.`;
   }
 }
 
-module.exports = Person;
+// Export the Person class so it can be used in other files
+export default Person;
+
