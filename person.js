@@ -28,5 +28,4 @@ class Person {
     }
   }
   
-  // Use CommonJS export syntax
   module.exports = {Person};
